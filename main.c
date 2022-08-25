@@ -15,6 +15,7 @@ int main() {
     printf("Digite a opção desejada:\n");
     printf("\t[0]: Sair\n");
     printf("\t[1]: Inserir contato\n");
+    printf("\t[2]: Remover contato\n");
 
     scanf("%d", &opcao);
 
@@ -28,6 +29,18 @@ int main() {
       scanf(" %s", agenda[quantidade].numero);
 
       ++quantidade;
+    } else if (opcao == 2) {
+      printf("[Remover contato]\n");
+      int posicao, i;
+
+      printf("Informe a posição para remover: ");
+      scanf("%d", &posicao);
+
+      for (i = posicao; i < quantidade - 1; ++i) {
+        agenda[i] = agenda[i + 1];
+      }
+
+      --quantidade;
     }
   } while (opcao != 0);
 
