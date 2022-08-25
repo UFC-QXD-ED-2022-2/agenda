@@ -14,8 +14,21 @@ int main() {
   do {
     printf("Digite a opção desejada:\n");
     printf("\t[0]: Sair\n");
+    printf("\t[1]: Inserir contato\n");
 
     scanf("%d", &opcao);
+
+    if (opcao == 1) {
+      printf("[Inserir contato]\n");
+
+      printf("Informe o nome: ");
+      scanf("%s", agenda[quantidade].nome);
+
+      printf("Informe o telefone: ");
+      scanf(" %s", agenda[quantidade].numero);
+
+      ++quantidade;
+    }
   } while (opcao != 0);
 
   return 0;
