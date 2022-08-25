@@ -18,6 +18,7 @@ int main() {
     printf("\t[1]: Inserir contato\n");
     printf("\t[2]: Remover contato\n");
     printf("\t[3]: Buscar contato por nome\n");
+    printf("\t[4]: Imprimir agenda\n");
 
     scanf("%d", &opcao);
 
@@ -66,6 +67,15 @@ int main() {
           printf("\tNumero: %s\n\n", agenda[i].numero);
           break;
         }
+      }
+    } else if (opcao == 4) {
+      printf("[Imprimir agenda]\n");
+
+      int i;
+      for (i = 0; i < quantidade; ++i) {
+        printf("Contato [%d]:\n", i);
+        printf("\tNome: %s\n", agenda[i].nome);
+        printf("\tNumero: %s\n\n", agenda[i].numero);
       }
     }
   } while (opcao != 0);
