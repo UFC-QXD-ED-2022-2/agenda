@@ -31,15 +31,23 @@ int main() {
       ++quantidade;
     } else if (opcao == 2) {
       printf("[Remover contato]\n");
-      int posicao, i;
+      // int posicao, i;
+
+      // printf("Informe a posição para remover: ");
+      // scanf("%d", &posicao);
+
+      // for (i = posicao; i < quantidade - 1; ++i) {
+      //   agenda[i] = agenda[i + 1];
+      // }
+
+      // --quantidade;
+
+      int posicao;
 
       printf("Informe a posição para remover: ");
       scanf("%d", &posicao);
 
-      for (i = posicao; i < quantidade - 1; ++i) {
-        agenda[i] = agenda[i + 1];
-      }
-
+      agenda[posicao] = agenda[quantidade - 1];
       --quantidade;
     }
   } while (opcao != 0);
