@@ -15,3 +15,17 @@ void selection_sort(int vetor[], int tamanho) {
     vetor[i_menor] = temp;
   }
 }
+
+void insertion_sort(int vetor[], int tamanho) {
+  int i, j;
+
+  for (i = 1; i < tamanho; ++i) {
+    int temp = vetor[i];
+
+    for (j = i - 1; j >= 0 && vetor[j] > temp; --j) {
+      vetor[j + 1] = vetor[j];
+    }
+
+    vetor[j + 1] = temp;
+  }
+}
