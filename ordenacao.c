@@ -29,3 +29,17 @@ void insertion_sort(int vetor[], int tamanho) {
     vetor[j + 1] = temp;
   }
 }
+
+void bubble_sort(int vetor[], int tamanho) {
+  int i, j;
+
+  for (i = 0; i < tamanho; ++i) {
+    for (j = 0; j < tamanho - 1 - i; ++j) {
+      if (vetor[j + 1] < vetor[j]) {
+        int temp = vetor[j + 1];
+        vetor[j + 1] = vetor[j];
+        vetor[j] = temp;
+      }
+    }
+  }
+}
